@@ -14,7 +14,7 @@
 
 section {
   display: flex;
-  background-color: rgb(245, 251, 245);
+  background-color: rgba(227, 236, 206, 0.067);
   border-radius: 4rem;
 
   flex-direction: row;
@@ -69,6 +69,7 @@ section {
   border-radius: 2rem;
 }
 
+
 .btn-text button {
   margin-top: 1.5rem;
   width: 19em;
@@ -103,8 +104,9 @@ section {
 
 @media screen and (max-width: 480px) {
   .home {
+    align-items: center;
     width: 94%;
-    margin-left: 3%;
+    margin-left: 0%;
     margin-right: 3%;
   }
 
@@ -117,6 +119,7 @@ section {
   }
 
   .right-image {
+    margin-left: 5%;
     width: 100%;
     height: auto;
   }

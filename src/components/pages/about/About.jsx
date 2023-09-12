@@ -53,7 +53,7 @@ const About = () => {
     },
 
     {
-      name: "Harshita M",
+      name: "Harshita Matkan",
       role: "ML Scientist",
       description: "Worked on image processing and recommendation",
       linkedin: "https://www.linkedin.com/in/harshita-matkan-936237231/",
