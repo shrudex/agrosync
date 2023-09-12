@@ -79,8 +79,8 @@ const About = () => {
         <div className="col-md-12 text-center">
           <p className="title">
             Meet the Minds Behind
-            <span class="title-span">
-              <b>Agrosync</b>
+            <span className="title-span">
+              <b> Agrosync</b>
             </span>
           </p>
           <p className="section-subtitle">{subtitle}</p>
