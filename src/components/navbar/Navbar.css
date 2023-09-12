@@ -13,10 +13,12 @@ nav {
   border-radius: 1.2rem;
   margin: 1rem 1rem 1rem 1rem;
   z-index: 99;
+  opacity: 0.98;
 }
 
 nav .title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 900;
   margin: 1rem;
   font-weight: bold;
   color: white;
