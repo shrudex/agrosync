@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 50px;
+}
+.title-span {
+  color: green;
+}
+
+.section{
+    margin-bottom: 3rem;
+}
+
+.section-subtitle {
+padding-left: 3rem;
+padding-right: 3rem;
+  max-width: fit-content;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #227c70;
+}
+
+.team-content{
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	align-items: center;
+	gap: 3rem;
+	text-align: center;
+	margin-top: 4rem;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+
+}
+.team-content img{
+	width: 170px;
+	height: 170px;
+	border-radius: 205px;
+	margin-bottom: 15px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+	padding: 16px;
+	background: #61764B;
+	border-radius: 15px;
+	transition: all .38s ease;
+    width: auto;
+    text-align: center;
+}
+.box h3{
+	font-size: 33px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 0%;
+    text-transform: capitalize;
+    font-family: 'Raleway';
+}
+.box h5{
+	font-size: 15px;
+	font-weight: 600;
+	color: black;
+    background-color: #CCD6A6;
+    font-family: 'Inter';
+    width: auto;
+    padding: 0 0.6rem 0 0.6rem;
+    border-radius: 400px;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+    display: inline-block;
+}
+.icons i{
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 8px;
+	transition: all .38s ease;
+}
+.icons i:hover{
+	transform: scale(1.2);
+}
+
+
+.box:hover{
+	transform: translateY(-10px);
+	cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.482) 0px 7px 29px 0px;
+    background-color: #2a351c;
+}
+
+
+@media(max-width: 1240px){
+	.team{
+		width: 100%;
+		height: auto;
+		padding: 90px 2%;
+	}
+	.center h1{
+		font-size: 3.2rem;
+	}
+}
+
+/* Use media query to adjust the number of columns */
+@media (max-width: 768px) {
+    .team-content {
+      grid-template-columns: repeat(1, 1fr); /* One column for smaller screens */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .team-content {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .team-content {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+  }
