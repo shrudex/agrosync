@@ -35,7 +35,7 @@ const About = () => {
       github: "#",
       email: "#",
       instagram: "#",
-      imgSrc: "./images/dummy.png",
+      imgSrc: "./images/d1.png",
     },
   ];
 
@@ -48,7 +48,7 @@ const About = () => {
       github: "#",
       email: "#",
       instagram: "#",
-      imgSrc: "./images/dummy.png",
+      imgSrc: "./images/d1.png",
     },
 
     {
@@ -59,7 +59,7 @@ const About = () => {
       github: "#",
       email: "#",
       instagram: "#",
-      imgSrc: "./images/dummy.png",
+      imgSrc: "./images/d2.png",
     },
     {
       name: "Dishita Mohan",
@@ -69,7 +69,7 @@ const About = () => {
       github: "#",
       email: "#",
       instagram: "#",
-      imgSrc: "./images/dummy.png",
+      imgSrc: "./images/d2.png",
     },
   ];
 
