@@ -20,7 +20,7 @@ const About = () => {
     },
     {
       name: "Ishaan Sachdeva",
-      role: "ML Scientist",
+      role: "Deep Learning Scientist",
       description: "Trained the classification model for disease detection",
       linkedin: "http://www.linkedin.com/in/ishaan-sachdeva-9a6b72233",
       github: "https://github.com/Ishaan-73",
@@ -30,7 +30,7 @@ const About = () => {
     },
     {
       name: "Akshay Singh",
-      role: "ML Scientist ",
+      role: "Machine Learning Engineer ",
       description: "Preprocessed the datasets used",
       linkedin: "https://www.linkedin.com/in/akshay-singh-754960219/",
       github: "https://github.com/akshays1ngh",
@@ -54,7 +54,7 @@ const About = () => {
 
     {
       name: "Harshita Matkan",
-      role: "ML Scientist",
+      role: "Data Scientist",
       description: "Worked on image processing and recommendation",
       linkedin: "https://www.linkedin.com/in/harshita-matkan-936237231/",
       github: "https://github.com/harshitamatkan2511",
@@ -64,7 +64,7 @@ const About = () => {
     },
     {
       name: "Dishita Mohan",
-      role: "ML Scientist",
+      role: "Machine Learning Researcher",
       description: "Worked on creating a CNN model",
       linkedin: "https://www.linkedin.com/in/dishita-mohan-304413227",
       github: "https://github.com/dishitamohan",
@@ -75,19 +75,19 @@ const About = () => {
   ];
 
   return (
-    <section className="section">
-      <div className="container">
+    <section className="about-section">
+      <div className="about-container">
         <div className="col-md-12 text-center">
-          <p className="title">
+          <p className="about-title">
             Meet the Minds Behind
-            <span className="title-span">
+            <span className="about-title-span">
               <b> Agrosync</b>
             </span>
           </p>
           
-          <p className="section-subtitle">{subtitle}</p>
+          <p className="about-section-subtitle">{subtitle}</p>
         </div>
-        <div className="team-content">
+        <div className="about-team-content">
           {teamMembers.map((member, index) => (
             <Profile key={index} {...member} />
           ))}

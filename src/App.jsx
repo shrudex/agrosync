@@ -8,8 +8,8 @@ import { AnimatePresence } from "framer-motion";
 
 import About from "./components/pages/about/About";
 import Classify from "./components/pages/Classify";
-import Contact from "./components/pages/Contact";
-import Home from "./components/pages/Home";
+import Contact from "./components/pages/contact/Contact";
+import Home from "./components/pages/home/Home";
 import Information from "./components/pages/Information";
 import Market from "./components/pages/Market";
 import Weather from "./components/pages/Weather";

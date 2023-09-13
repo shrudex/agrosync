@@ -5,20 +5,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-.title {
+.about-title {  
   font-size: 50px;
 }
-.title-span {
+.about-title-span {
   color: green;
 }
 
-.section{
+.about-section{
     margin-bottom: 3rem;
     height: 100%;
     background-color: white;
 }
 
-.section-subtitle {
+.about-section-subtitle {
 padding-left: 3rem;
 padding-right: 3rem;
   max-width: fit-content;
@@ -29,7 +29,7 @@ padding-right: 3rem;
   color: #227c70;
 }
 
-.team-content{
+.about-team-content{
 	width: 100%;
 	max-width: 1350px;
 	margin: 0 auto;
@@ -42,7 +42,7 @@ padding-right: 3rem;
     grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
 
 }
-.team-content img{
+.about-team-content img{
 	width: 170px;
 	height: 170px;
 	border-radius: 205px;
@@ -105,19 +105,19 @@ padding-right: 3rem;
 
 
 @media(max-width: 1240px){
-	.team{
+	.about-team{
 		width: 100%;
 		height: auto;
 		padding: 90px 2%;
 	}
-	.center h1{
+	.about-center h1{
 		font-size: 3.2rem;
 	}
 }
 
 /* Use media query to adjust the number of columns */
 @media (max-width: 768px) {
-    .team-content {
+    .about-team-content {
       grid-template-columns: repeat(1, 1fr);
       padding-left: 1.2rem;
       padding-right: 1.2rem;
@@ -125,13 +125,13 @@ padding-right: 3rem;
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
-    .team-content {
+    .about-team-content {
       grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
     }
   }
   
   @media (min-width: 1025px) {
-    .team-content {
+    .about-team-content {
       grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     }
   }
