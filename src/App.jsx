@@ -2,7 +2,9 @@ import "./App.css";
 import { Navbar } from "./components/navbar/Navbar";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+
 import "font-awesome/css/font-awesome.min.css";
+import { AnimatePresence } from "framer-motion";
 
 import About from "./components/pages/about/About";
 import Classify from "./components/pages/Classify";

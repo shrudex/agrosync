@@ -67,8 +67,8 @@ section {
   height: 34rem;
   width: auto;
   border-radius: 2rem;
+  transition: transform 0.3s;
 }
-
 
 .btn-text button {
   margin-top: 1.5rem;
@@ -99,14 +99,79 @@ section {
 }
 
 .btn-text button:hover::before {
-  width: 19em;
+  width: 100%;
 }
+
+#services {
+  display: flex;
+  background-color: whitesmoke;
+  border-radius: 5rem;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.upper-text {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.upper-text p{
+  font-size: 3.3rem;
+  padding-left: 3%;
+}
+
+
+.upper-text button {
+  margin-top: 1.5rem;
+  width: 19em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.upper-text button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.upper-text button:hover::before {
+  width: 100%;
+}
+
+.lower-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+
 
 @media screen and (max-width: 480px) {
   .home {
     align-items: center;
     width: 94%;
-    margin-left: 0%;
+    margin-left: -1%;
     margin-right: 3%;
   }
 
@@ -127,5 +192,15 @@ section {
   .btn-text button {
     width: 100%;
     font-size: 14px;
+  }
+
+  .upper-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lower-body{
+    flex-direction: column;
   }
 }

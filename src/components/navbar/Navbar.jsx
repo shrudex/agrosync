@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";

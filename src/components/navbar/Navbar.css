@@ -20,8 +20,15 @@ nav .title {
   font-size: 1.7rem;
   font-weight: 900;
   margin: 1rem;
+  margin-left: 1.5rem;
   font-weight: bold;
   color: white;
+}
+
+nav .title:hover {
+  color: whitesmoke;
+  box-shadow: rgba(36, 36, 39, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 nav ul {
