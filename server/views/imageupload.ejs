@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+    <form action="/imageupload" method="POST" enctype="multipart/form-data">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name" id="name">
+        <label for="email">email</label>
+        <input type="text" name="email" placeholder="Email" id="email">
+        <label for="phone">phone</label>
+        <input type="number" name="phone" placeholder="Phone" id="phone">
+        <label for="image">image</label>
+        <input type="file" name="image" placeholder="Image" id="image" multiple>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
