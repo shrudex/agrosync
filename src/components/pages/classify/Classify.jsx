@@ -33,7 +33,7 @@ const Classify = () => {
     <div>
       <h1>Image Classification App</h1>
       <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload & Classify</button>
+      <button className="rounded border-2 border-black" onClick={handleUpload}>Upload & Classify</button>
       {result && <p>Result: {result}</p>}
     </div>
   );

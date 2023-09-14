@@ -7,7 +7,7 @@ import "font-awesome/css/font-awesome.min.css";
 import { AnimatePresence } from "framer-motion";
 
 import About from "./components/pages/about/About";
-import Classify from "./components/pages/Classify";
+import Classify from "./components/pages/classify/Classify";
 import Contact from "./components/pages/contact/Contact";
 import Home from "./components/pages/home/Home";
 import Information from "./components/pages/Information";
