@@ -40,12 +40,12 @@ app.get('/imageupload',(req, res) => {
     console.log('Route hit!');
     res.render('imageupload');
 })
-app.post('/imageupload', upload.single('image'), async (req, res) => {
+app.post('/imageupload', upload.single('file'), async (req, res) => {
     // const { email, name, phone } = req.body;
     const user = new User({
-        email: 'sampleemail@gay.com',
-        name: 'gareebkisaan',
-        phone: 696969
+        email: 'sampfdfdsdflesdfgefeeemail1@gay.com',
+        name: 'garedserfdfesdfgdfebikisaan1',
+        phone: 56654499349
     });
     // user.images = req.files.map(f => ({ url: f.path, filename: f.filename }))
     console.log(req.file);

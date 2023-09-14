@@ -7,6 +7,7 @@ const Classify = () => {
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
+    // setFile('image');
   };
 
   const handleUpload = async () => {
@@ -17,7 +18,7 @@ const Classify = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/classify/",
+        "http://localhost:3000/imageupload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -32,7 +33,7 @@ const Classify = () => {
   return (
     <div>
       <h1>Image Classification App</h1>
-      <input type="file" onChange={handleFileChange} />
+      <input type="file" onChange={handleFileChange} name="image" />
       <button className="rounded border-2 border-black" onClick={handleUpload}>Upload & Classify</button>
       {result && <p>Result: {result}</p>}
     </div>
