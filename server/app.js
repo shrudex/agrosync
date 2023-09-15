@@ -5,6 +5,14 @@ const router = express.Router({ mergeParams: true });
 // import userRoutes from './routes/users.js'
 // import methodOverride from 'method-override'
 // import eventRoutes from './routes/events.js';
+import mongoose from "mongoose";
+import cors from "cors";
+import path from "path";
+import { log } from "console";
+import multer from "multer";
+import { storage } from "../cloudinary/index.js";
+// import {cloudinary} from '../cloudinary/index.js';
+
 import mongoose from 'mongoose';
 import cors from 'cors';
 import path from 'path'

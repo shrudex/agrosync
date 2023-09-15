@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import passportLocalMongoose from 'passport-local-mongoose';
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -30,6 +30,8 @@ const userSchema = new mongoose.Schema({
         require: true
     }
 });
+    }]
+})
 
 userSchema.plugin(passportLocalMongoose);
 
