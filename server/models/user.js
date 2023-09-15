@@ -30,8 +30,7 @@ const userSchema = new mongoose.Schema({
         require: true
     }
 });
-    }]
-})
+
 
 userSchema.plugin(passportLocalMongoose);
 
