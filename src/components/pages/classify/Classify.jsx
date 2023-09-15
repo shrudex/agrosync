@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import "./Classify.css";
+
 const Classify = () => {
   const [file, setFile] = useState(null);
   const [result, setResult] = useState("");
@@ -31,11 +33,22 @@ const Classify = () => {
     }
   };
   return (
-    <div>
-      <h1>Image Classification App</h1>
-      <input type="file" onChange={handleFileChange} name="image" />
-      <button className="rounded border-2 border-black" onClick={handleUpload}>Upload & Classify</button>
-      {result && <p>Result: {result}</p>}
+    <div className="classify-main bg-green-300 w-full h-full overflow-hidden">
+      <div className="classify-main-p">
+        <div className="text-classify">
+          <h1>CROP DISEASE DETECTION</h1>
+          <input type="file" onChange={handleFileChange} name="image" />
+          <button
+            className="rounded border-2 border-black"
+            onClick={handleUpload}
+          >
+            Upload & Classify
+          </button>
+
+          {result && <p>Result: {result}</p>}
+        </div>
+        <img src="" alt="Image Loading" />
+      </div>
     </div>
   );
 };

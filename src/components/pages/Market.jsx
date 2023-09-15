@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const Market = () => {
-  return <div>market</div>;
-};
+  return (
+    <div>
+      market
+    </div>
+  )
+}
 
-export default Market;
+export default Market

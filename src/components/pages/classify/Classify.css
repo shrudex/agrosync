@@ -1,0 +1,17 @@
+.classify-main{
+    height: 100vh;
+}
+
+.classify-main-p{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-classify{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    gap: 2rem;
+}
