@@ -11,6 +11,10 @@ import path from 'path'
 import { log } from 'console';
 import multer from 'multer';
 import {storage} from '../cloudinary/index.js';
+import passport from 'passport';
+import LocalStrategy from 'passport-local';
+import flash from 'connect-flash';
+import session from 'express-session'; 
 // import {cloudinary} from '../cloudinary/index.js';
 
 import User from './models/user.js';
@@ -52,6 +56,11 @@ app.post('/imageupload', upload.single('file'), async (req, res) => {
     // console.log(user);
     await user.save();
     res.send('Uploaded!');
+})
+
+app.post('/login',passport.authenticate('local',{failureFlash:true,failureRedirect:'/login'}) ,(req,res)=>{
+    req.flash('success','Welcome back!')
+    res.redirect('/campgrounds')
 })
 
 app.listen(3000, () => {

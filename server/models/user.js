@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-
+import passportLocalMongoose from 'passport-local-mongoose';
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -19,7 +19,14 @@ const userSchema = new mongoose.Schema({
     images: [{
         url: String,
         filename: String
-    }]
+    }],
+    location:{
+        type:String,
+        require:true
+    }
 })
+
+userSchema.plugin(passportLocalMongoose)
+
 
 export default mongoose.model('User', userSchema)
