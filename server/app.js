@@ -12,9 +12,9 @@ import { log } from 'console';
 import multer from 'multer';
 import {storage} from '../cloudinary/index.js';
 // import {cloudinary} from '../cloudinary/index.js';
-
+import passport from 'passport';
+import LocalStrategy from 'passport-local';
 import User from "./models/user.js";
-// const upload = multer({ storage });
 const upload = multer({ storage });
 
 app.set("view engine", "ejs");
@@ -41,27 +41,39 @@ app.get("/imageupload", (req, res) => {
   res.render("imageupload");
 });
 
-const min = 1;
-const max = 10000000;
-const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+app.get('/user/:id',async(req,res)=>{
+    const user=await User.findById(req.params.id);
+    res.render('user',{user});
+})
 
+
+
+app.post("/register", async (req, res) => {
+    const user= new User(req.body);
+    // console.log(user);
+    // user.images.push({ url: req.file.path, filename: req.file.filename });
+    console.log(user);
+    await user.save();
+    res.send(user);
+});
 app.post("/imageupload", upload.single("file"), async (req, res) => {
-  // const { email, name, phone } = req.body;
-  const user = new User({
-    email: `gareebKissan${randomNumber}@gay.com`,
-    name: `gareebKisaanNo${randomNumber}`,
-    phone: randomNumber,
-  });
-  // user.images = req.files.map(f => ({ url: f.path, filename: f.filename }))
+  user.images.push({ url: req.file.path, filename: req.file.filename });
   console.log(req.file);
   // console.log(user);
   await user.save();
   res.send("Uploaded!");
 });
 
-app.post('/login',passport.authenticate('local',{failureFlash:true,failureRedirect:'/login'}) ,(req,res)=>{
-    req.flash('success','Welcome back!')
-    res.redirect('/campgrounds')
+app.post('/login' ,async(req,res)=>{
+    //find by username
+    const user=await User.findOne({username:req.body.username});
+    if(user.password===req.body.password){
+        res.send('Logged in!');
+    }
+    else{
+        res.send('Incorrect Username/password!');
+    }
+    // res.redirect('/campgrounds')
 })
 
 app.listen(3000, () => {

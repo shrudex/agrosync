@@ -15,8 +15,11 @@ const seedDB = async () => {
     await User.deleteMany({});
     const user = new User({
         email: "abc@example.com",
-        name: "abc",
+        username: "abc",
         phone: "1234567890",
+        city:'Mumbai',
+        town:'Thane',
+        password:'abc'
     });
     await user.save();
 };
